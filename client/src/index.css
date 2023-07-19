@@ -1,13 +1,133 @@
-body {
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+label {
+  font-size: 1.5rem;
+  color: black ;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgb(41, 6, 54) 40%,
+    rgb(94, 10, 211) 100%
+  );
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.form_container {
+  background-color: #afa9a9d5;
+  padding: 2rem 3rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+
+.form_container > h2 {
+  margin-block: 1rem;
+  padding-block: 0.6rem;
+  color: rgba(94, 10, 211);
+}
+
+.form_container > form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.form_container div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.form_container input {
+  border: none;
+  padding: 0.5rem;
+  color: #000;
+  border-radius: 0.5rem;
+  border-bottom: 1px solid gray;
+  font-size: 1rem;
+  outline: none;
+}
+
+.form_container input::placeholder {
+  font-size: 0.9rem;
+  color: #000;
+  font-style: italic;
+}
+
+.form_container button {
+  background-color: rgba(94, 10, 211);
+  color: #fff;
+  border: none;
+  padding: 0.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+
+span a {
+  text-decoration: none;
+  color: rgb(94, 10, 211);
+}
+
+.homePage {
+  height: 100vh;
+  width: 100vw;
+  background: #000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.homePage span {
+  color: rgba(94, 10, 211);
+}
+
+.homePage button {
+  background-color: rgba(61, 11, 110, 0.836);
+  color: #fff;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  border-radius: 2.5rem;
+  transition: ease-in 0.3s;
+  border: none;
+}
+
+.homePage button:hover {
+  background-color: rgba(94, 10, 211);
+}
+
+
+@media only screen and (max-width: 1200px){
+  .homePage{
+    font-size: 1.5rem;
+  }
+  .homePage button {
+    padding: 0.6rem 1rem;
+    font-size: 1.5rem;
+  }
 }

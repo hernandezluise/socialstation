@@ -67,7 +67,7 @@ const Register = () => {
             <h2>Signup Account</h2>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="firstName">First Name:</label>
+                    <label htmlFor="firstName">First Name: </label>
                     <input
                         type="text"
                         name="firstName"
@@ -77,7 +77,7 @@ const Register = () => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="lastName">Last Name:</label>
+                    <label htmlFor="lastName">Last Name: </label>
                     <input
                         type="text"
                         name="lastName"
@@ -87,7 +87,7 @@ const Register = () => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="email">Email</label>
+                    <label htmlFor="email">Email: </label>
                     <input
                         type="email"
                         name="email"
@@ -97,7 +97,7 @@ const Register = () => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="password">Password</label>
+                    <label htmlFor="password">Password: </label>
                     <input
                         type="password"
                         name="password"
@@ -107,12 +107,12 @@ const Register = () => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="confirmPassword">Confirm Password</label>
+                    <label htmlFor="confirmPassword">Confirm Password: </label>
                     <input
                         type="password"
                         name="confirmPassword"
                         value={confirmPassword}
-                        placeholder="Enter your password"
+                        placeholder="Confirm your password"
                         onChange={handleOnChange}
                     />
                 </div>

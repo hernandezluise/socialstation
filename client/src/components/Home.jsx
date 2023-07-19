@@ -21,8 +21,8 @@ const Home = () => {
             const { status, user } = data;
             setFirstName(user);
             return status
-                ? toast(`Hello ${user}`, {
-                    position: "top-right",
+                ? toast( {
+                    position: "",
                 })
                 : (removeCookie("token"), navigate("/login"));
         };
@@ -30,18 +30,18 @@ const Home = () => {
     }, [cookies, navigate, removeCookie]);
     const Logout = () => {
         removeCookie("token");
-        navigate("/signup");
+        navigate("/login");
     };
     return (
         <>
-            <div className="home_page">
+            <div className="homePage">
+            <ToastContainer />
                 <h4>
                     {" "}
                     Welcome <span>{firstName}</span>
                 </h4>
                 <button onClick={Logout}>LOGOUT</button>
             </div>
-            <ToastContainer />
         </>
     );
 };
